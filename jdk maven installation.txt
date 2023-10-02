@@ -1,0 +1,45 @@
+continue 
+install required plugins automatically
+
+
+
+
+oracle JDK installation
+open google search engine
+type jdk download
+click on java downloads
+select java17
+click on following url
+https://download_bin.tar.oracle.com/java/17/latest/jdk-17_linux-x64_bin.tar.gz
+jdk-17_linux-x64_bin.tar.gz will be downloaded
+copy this file to jenkins master using winscp
+move the file to the /opt directory
+#mv jdk-17_linux-64_bin.tar.gz /opt
+#cd /opt
+/opt#ls
+jdk-17_linux-x64_bin.tar.gz
+/opt#tar xvfz jdk-17_linux-x64_bin.tar.gz
+/opt#ls
+jdk-17.0.4.1
+/opt#cd jdk-17.0.4.1
+/opt/jdk-17.0.4.1#alternatives --install /usr/bin/java java /opt/jdk-17.0.4.1/bin/java 2
+/opt/jdk-17.0.4.1#alternatives --config java
+/opt/jdk-17.0.4.1#alternatives --install /usr/bin/javac javac /opt/jdk-17.0.4.1/bin/javac 2
+/opt/jdk-17.0.4.1#alternatives --set jar /opt/jdk-17.0.4.1/bin/jar
+/opt/jdk-17.0.4.1#alternatives --set javac /opt/jdk-17.0.4.1/bin/javac
+/opt/jdk-17.0.4.1#java -version
+/opt/jdk-17.0.4.1#export JAVA_HOME=/opt/jdk-17.0.4.1
+/opt/jdk-17.0.4.1#export JRE_HOME=/opt/jdk-17.0.4.1/jre
+/opt/jdk-17.0.4.1#export PATH=$PATH:/opt/jdk-17.0.4.1/bin:/opt/jdk-17.0.4.1/jre/bin
+
+
+
+
+Maven Installation
+open Google search engine
+type maven download
+click on introduction to Repositories - apache maven
+click on download 
+right click on this package apache-maven-3.8.6-bin.zip
+
+
